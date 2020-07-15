@@ -17,6 +17,8 @@ class ResultsViewController: UIViewController {
     
     var movieTag: String = "0"
     
+    var infoTitle = ""
+    var infoOverview = ""
     
     @IBOutlet weak var posterImage: UIImageView!
     
@@ -40,10 +42,22 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var labelView: UIView!
     
     
-    
     @IBOutlet weak var infoButton: UIButton!
     
+    @IBAction func infoButtonPressed(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "goToInfo", sender: self)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToInfo" {
+            let destinationVC = segue.destination as! InfoViewController
+            destinationVC.name = infoTitle
+            destinationVC.overview = infoOverview
+
+            
+        }
+    }
     
     var trailers = ["https://apple.com"]
     
@@ -128,6 +142,9 @@ extension ResultsViewController: MovieManagerDelegate {
         print(movie.movieOverview)
         print(movie.posterImage)
         print(movie.movieId)
+        
+        infoTitle = movie.movieName
+        infoOverview = movie.movieOverview
         
         movieManager.loadPictures = false
                  

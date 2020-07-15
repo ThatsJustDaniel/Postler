@@ -8,6 +8,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Info View Controller-->
+        <scene sceneID="UpO-am-hkR">
+            <objects>
+                <viewController id="m0s-GX-qnP" customClass="InfoViewController" customModule="ARtrailer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UjE-uV-Agk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-9T-QpH">
+                                <rect key="frame" x="162.66666666666666" y="40" width="50" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uob-3S-XJB">
+                                <rect key="frame" x="10" y="90" width="355" height="379"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uob-3S-XJB" firstAttribute="top" secondItem="Qbh-9T-QpH" secondAttribute="bottom" constant="20" id="5m7-4u-RpO"/>
+                            <constraint firstItem="pgS-fo-b67" firstAttribute="trailing" secondItem="uob-3S-XJB" secondAttribute="trailing" constant="10" id="MSy-JL-Cn4"/>
+                            <constraint firstItem="uob-3S-XJB" firstAttribute="leading" secondItem="pgS-fo-b67" secondAttribute="leading" constant="10" id="U6b-Yi-1yJ"/>
+                            <constraint firstItem="uob-3S-XJB" firstAttribute="height" secondItem="UjE-uV-Agk" secondAttribute="height" multiplier="0.5" id="gPf-qH-1sy"/>
+                            <constraint firstItem="Qbh-9T-QpH" firstAttribute="top" secondItem="UjE-uV-Agk" secondAttribute="topMargin" constant="40" id="iry-QG-1GQ"/>
+                            <constraint firstItem="Qbh-9T-QpH" firstAttribute="centerX" secondItem="UjE-uV-Agk" secondAttribute="centerX" id="zt0-iA-0qJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pgS-fo-b67"/>
+                    </view>
+                    <connections>
+                        <outlet property="overviewLabel" destination="uob-3S-XJB" id="iQJ-0g-NRy"/>
+                        <outlet property="titleLabel" destination="Qbh-9T-QpH" id="oDX-2I-zw5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T0n-BD-tUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1852" y="136"/>
+        </scene>
         <!--Results View Controller-->
         <scene sceneID="rhP-s7-NNk">
             <objects>
@@ -112,6 +153,9 @@
                                         <state key="normal" title="More Information">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="infoButtonPressed:" destination="h5N-jp-4ds" eventType="touchUpInside" id="DMW-xx-ZeK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -168,6 +212,7 @@
                         <outlet property="posterImage" destination="yib-44-N1J" id="htg-n4-mxf"/>
                         <outlet property="sliderCollectionView" destination="ZQn-wC-w9K" id="Spi-CB-C4t"/>
                         <outlet property="titleLabel" destination="hDe-uA-0we" id="rie-5o-Qec"/>
+                        <segue destination="m0s-GX-qnP" kind="presentation" identifier="goToInfo" id="Fx2-vF-a7p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjh-GO-g3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
