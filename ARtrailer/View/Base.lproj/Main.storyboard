@@ -107,7 +107,8 @@
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6A-33-Sqv" userLabel="Button">
                                         <rect key="frame" x="0.0" y="1093.6666666666667" width="375" height="64"/>
-                                        <color key="backgroundColor" red="0.25564392860000001" green="0.408776431" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="More Information">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -135,8 +136,7 @@
                                 <rect key="frame" x="15" y="59" width="46" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="backButton:" destination="h5N-jp-4ds" eventType="touchUpInside" id="pcw-eF-lvg"/>
@@ -162,7 +162,7 @@
                         <viewLayoutGuide key="safeArea" id="3qe-ds-WN5"/>
                     </view>
                     <connections>
-                        <outlet property="button" destination="Y6A-33-Sqv" id="A6e-pf-qmE"/>
+                        <outlet property="infoButton" destination="Y6A-33-Sqv" id="A6e-pf-qmE"/>
                         <outlet property="labelView" destination="WjL-gW-h9C" id="d5l-6e-qn0"/>
                         <outlet property="overviewLabel" destination="P0F-0V-Tx8" id="GKD-Ze-bNj"/>
                         <outlet property="posterImage" destination="yib-44-N1J" id="htg-n4-mxf"/>

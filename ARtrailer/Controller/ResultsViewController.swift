@@ -41,16 +41,11 @@ class ResultsViewController: UIViewController {
     
     
     
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var infoButton: UIButton!
     
     
     
-
     var trailers = ["https://apple.com"]
-    
-    
-    
-    
     
     
     override func viewDidLoad() {
@@ -61,7 +56,9 @@ class ResultsViewController: UIViewController {
         
         sliderCollectionView.layer.cornerRadius = 20
         
-        button.layer.cornerRadius = 20
+        infoButton.layer.cornerRadius = 20
+        
+
         
         
         movieManager.delegate = self
