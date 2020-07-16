@@ -257,7 +257,7 @@ struct MovieManager {
                 func videosArray() -> [String] {
                     
                     var videoArray = [String]()
-                    let video1 = decodedData.videos.results.first??.key ?? "WORJw3VsFEc"
+                    let video1 = decodedData.videos.results.first??.key ?? "m927vJiLn7E"
                     let videoCount = decodedData.videos.results.count
                     videoArray.append("https://www.youtube.com/embed/\(video1)")
                     
