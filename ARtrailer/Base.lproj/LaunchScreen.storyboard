@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,17 +12,17 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="zpb-jS-lh8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmP-Oo-xZx">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="408.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="366.66666666666669"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-3Q-WF6">
-                                                <rect key="frame" x="144.5" y="79.5" width="125" height="250"/>
+                                                <rect key="frame" x="125" y="58.333333333333314" width="125" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="125" id="KTw-d0-tus"/>
                                                     <constraint firstAttribute="height" constant="250" id="Nib-6b-hIc"/>
@@ -35,19 +35,34 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c29-cH-mQ6">
-                                        <rect key="frame" x="0.0" y="409.5" width="414" height="408.5"/>
+                                        <rect key="frame" x="0.0" y="367.66666666666674" width="375" height="366.33333333333326"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo 1 " translatesAutoresizingMaskIntoConstraints="NO" id="erx-cz-nSf">
-                                                <rect key="frame" x="157" y="154.5" width="100" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="DYb-22-tKI"/>
-                                                    <constraint firstAttribute="width" constant="100" id="NBc-Gb-ftz"/>
-                                                </constraints>
-                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="hQN-q4-JOi">
+                                                <rect key="frame" x="32.666666666666657" y="68.666666666666629" width="310" height="229"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo 1 " translatesAutoresizingMaskIntoConstraints="NO" id="erx-cz-nSf">
+                                                        <rect key="frame" x="105" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="DYb-22-tKI"/>
+                                                            <constraint firstAttribute="width" constant="100" id="NBc-Gb-ftz"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This product uses the TMDb API but is not endorsed or certified by TMDb." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eY-IH-d3X">
+                                                        <rect key="frame" x="0.0" y="119.00000000000006" width="310" height="110"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="110" id="Fft-jp-VVL"/>
+                                                            <constraint firstAttribute="width" constant="310" id="Xpn-vu-06O"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="erx-cz-nSf" firstAttribute="centerY" secondItem="c29-cH-mQ6" secondAttribute="centerY" id="cvo-04-T0M"/>
-                                            <constraint firstItem="erx-cz-nSf" firstAttribute="centerX" secondItem="c29-cH-mQ6" secondAttribute="centerX" id="sQn-y6-Cdm"/>
+                                            <constraint firstItem="hQN-q4-JOi" firstAttribute="centerX" secondItem="c29-cH-mQ6" secondAttribute="centerX" id="Y5z-i2-cEs"/>
+                                            <constraint firstItem="hQN-q4-JOi" firstAttribute="centerY" secondItem="c29-cH-mQ6" secondAttribute="centerY" id="mxN-mb-Dn4"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -65,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="52" y="374.6305418719212"/>
         </scene>
     </scenes>
     <resources>
