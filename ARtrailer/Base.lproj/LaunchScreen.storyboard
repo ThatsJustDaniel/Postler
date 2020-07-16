@@ -15,16 +15,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IyM-GM-dsG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="zpb-jS-lh8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmP-Oo-xZx">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="408.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-3Q-WF6">
+                                                <rect key="frame" x="144.5" y="79.5" width="125" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="125" id="KTw-d0-tus"/>
+                                                    <constraint firstAttribute="height" constant="250" id="Nib-6b-hIc"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="lkg-3Q-WF6" firstAttribute="centerX" secondItem="wmP-Oo-xZx" secondAttribute="centerX" id="HoV-gO-pj6"/>
+                                            <constraint firstItem="lkg-3Q-WF6" firstAttribute="centerY" secondItem="wmP-Oo-xZx" secondAttribute="centerY" id="yZr-Yq-s82"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c29-cH-mQ6">
+                                        <rect key="frame" x="0.0" y="409.5" width="414" height="408.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo 1 " translatesAutoresizingMaskIntoConstraints="NO" id="erx-cz-nSf">
+                                                <rect key="frame" x="157" y="154.5" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="DYb-22-tKI"/>
+                                                    <constraint firstAttribute="width" constant="100" id="NBc-Gb-ftz"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="erx-cz-nSf" firstAttribute="centerY" secondItem="c29-cH-mQ6" secondAttribute="centerY" id="cvo-04-T0M"/>
+                                            <constraint firstItem="erx-cz-nSf" firstAttribute="centerX" secondItem="c29-cH-mQ6" secondAttribute="centerX" id="sQn-y6-Cdm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.050980392156862744" green="0.14509803921568626" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="IyM-GM-dsG" secondAttribute="bottom" id="Cdg-Q9-qgi"/>
-                            <constraint firstItem="IyM-GM-dsG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="HK4-3y-J7Q"/>
-                            <constraint firstItem="IyM-GM-dsG" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="IhE-3v-6Qp"/>
-                            <constraint firstItem="IyM-GM-dsG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="OJo-V3-fO5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zpb-jS-lh8" secondAttribute="bottom" id="6pc-LW-YSc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zpb-jS-lh8" secondAttribute="trailing" id="CGl-aR-HKt"/>
+                            <constraint firstItem="zpb-jS-lh8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YGL-kU-tjL"/>
+                            <constraint firstItem="zpb-jS-lh8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w8d-Gd-URH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -34,4 +68,8 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo 1 " width="120" height="87"/>
+        <image name="poster" width="475" height="715"/>
+    </resources>
 </document>
